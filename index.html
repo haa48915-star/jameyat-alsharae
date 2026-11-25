@@ -1,285 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>جمعية الدعوة والإرشاد بالشرائع بمكة المكرمة</title>
-<meta name="description" content="جمعية خيرية مصرحة برقم 3201 تدعو إلى الله بالحكمة والموعظة الحسنة في شرق مكة المكرمة.">
-<link rel="preconnect">
-<link rel="preconnect" crossorigin>
-<link rel="stylesheet">
-<style>
-/* Brand tokens: change these four values to match the logo exactly */
-:root{
-  --brand:#0e5a45; --brand-ink:#ffffff; --gold:#b98a2e; --hero-a:#0a3a2d; --hero-b:#12684f;
-  --bg:#f3f6f4; --surface:#ffffff; --ink:#14231d; --muted:#586a61; --line:#dce5e0;
-  --hdr:rgba(243,246,244,.88);
-  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark; --brand:#3fb58a; --brand-ink:#06251b; --gold:#e0b559; --hero-a:#07241b; --hero-b:#0d4a39;
-    --bg:#0c1511; --surface:#142019; --ink:#eaf2ed; --muted:#9bb0a4; --line:#24352c; --hdr:rgba(12,21,17,.88);
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark; --brand:#3fb58a; --brand-ink:#06251b; --gold:#e0b559; --hero-a:#07241b; --hero-b:#0d4a39;
-  --bg:#0c1511; --surface:#142019; --ink:#eaf2ed; --muted:#9bb0a4; --line:#24352c; --hdr:rgba(12,21,17,.88);
-}
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
-*,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.8 "IBM Plex Sans Arabic",Tahoma,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--hdr);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-a{color:inherit;text-decoration:none;pointer-events:none;cursor:default}.report-link{pointer-events:auto;cursor:pointer}
-a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
-h1,h2,h3{font-family:"Reem Kufi","IBM Plex Sans Arabic",Tahoma,sans-serif;font-weight:700;line-height:1.35;margin:0}
-.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
-
-/* header */
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--hdr);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;gap:1.25rem;min-height:68px}
-.brand{display:flex;align-items:center;gap:.7rem;font-family:"Reem Kufi",sans-serif;font-weight:700;font-size:1.05rem;line-height:1.25}
-.mark{width:40px;height:40px;flex:none}
-nav{margin-inline-start:auto;display:flex;align-items:center;gap:.25rem}
-nav>a,nav summary{padding:.5rem .8rem;border-radius:8px;font-weight:500;font-size:.95rem;cursor:pointer;list-style:none;color:var(--ink)}
-nav summary::-webkit-details-marker{display:none}
-nav>a:hover,nav summary:hover,nav details[open]>summary{background:color-mix(in srgb,var(--brand) 10%,transparent)}
-nav details{position:relative}
-.sub{position:absolute;inset-inline-start:0;top:100%;min-width:230px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.4rem;display:grid;box-shadow:0 14px 34px rgba(0,0,0,.14)}
-.sub a{padding:.5rem .75rem;border-radius:8px;font-size:.93rem}
-.sub a:hover{background:color-mix(in srgb,var(--brand) 10%,transparent)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--gold);color:#1d1606;font-weight:600;padding:.7rem 1.4rem;border-radius:999px;border:0;font:600 .98rem "IBM Plex Sans Arabic",sans-serif;cursor:pointer;transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
-#menu{display:none;margin-inline-start:auto;background:none;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:.5rem .75rem;font:500 .95rem "IBM Plex Sans Arabic",sans-serif}
-
-/* hero */
-.hero{background:linear-gradient(160deg,var(--hero-a),var(--hero-b));color:#fff;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;opacity:.09;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cpath d='M36 6l8 14 14-8-8 14 14 8-14 8 8 14-14-8-8 14-8-14-14 8 8-14-14-8 14-8-8-14 14 8z' fill='none' stroke='white' stroke-width='1.2'/%3E%3C/svg%3E")}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;padding-block:clamp(3rem,8vw,6rem);align-items:center}
-.hero h1{font-size:clamp(2rem,5.2vw,3.6rem)}
-.hero p{max-width:34em;color:rgba(255,255,255,.86);font-size:1.1rem;margin:1.2rem 0 2rem}
-.acts{display:flex;gap:.8rem;flex-wrap:wrap}
-.road{list-style:none;margin:0;padding:0 2rem 0 0;position:relative}
-.road::before{content:"";position:absolute;inset-block:.6rem;inset-inline-start:.45rem;border-inline-start:2px dashed rgba(255,255,255,.4)}
-.road li{position:relative;padding:.9rem 0}
-.road li::before{content:"";position:absolute;inset-inline-start:-1.95rem;top:1.35rem;width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(255,255,255,.14)}
-.road b{display:block;font:700 2rem/1.2 "Reem Kufi",sans-serif}
-.road span{color:rgba(255,255,255,.82);font-size:.95rem}
-.road small{display:block;margin-bottom:.4rem;color:var(--gold);font-weight:600}
-
-/* sections */
-section{padding-block:clamp(3rem,7vw,5.5rem)}
-.head{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}
-.head h2{font-size:clamp(1.6rem,3.4vw,2.3rem)}
-.head a{color:var(--brand);font-weight:600}
-.totals{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:18px;background:var(--surface);overflow:hidden}
-.totals div{padding:1.6rem 1rem;text-align:center;border-inline-start:1px solid var(--line)}
-.totals div:first-child{border-inline-start:0}
-.totals b{display:block;font:700 clamp(1.5rem,3vw,2.2rem)/1.2 "Reem Kufi",sans-serif;color:var(--brand)}
-.totals span{color:var(--muted);font-size:.92rem}
-
-.proj{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
-.p{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.8rem;display:flex;flex-direction:column;gap:.8rem;transition:border-color .2s}
-.p:hover{border-color:var(--brand)}
-.p h3{font-size:1.4rem}
-.p p{margin:0;color:var(--muted)}
-.p .more{margin-top:auto;color:var(--brand);font-weight:600}
-.p.big{grid-column:1/-1;background:var(--brand);color:var(--brand-ink);border-color:var(--brand);flex-direction:row;align-items:center;gap:2rem}
-.p.big p{color:inherit;opacity:.88}
-.p.big .more{color:inherit;white-space:nowrap;margin:0;border:1.5px solid currentColor;border-radius:999px;padding:.6rem 1.3rem}
-.p.big div{flex:1}
-
-.news{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.news a{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;padding:1.2rem .25rem;border-bottom:1px solid var(--line)}
-.news a:hover h3{color:var(--brand)}
-.news h3{font-size:1.15rem;transition:color .15s}
-.news p{margin:.2rem 0 0;color:var(--muted);font-size:.95rem}
-.news em{font-style:normal;color:var(--brand);font-weight:600;font-size:.9rem}
-
-.cta{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(2rem,5vw,3.5rem);display:flex;gap:2rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.cta h2{font-size:clamp(1.5rem,3vw,2.1rem)}
-.cta p{margin:.5rem 0 0;color:var(--muted)}
-
-footer{background:var(--hero-a);color:#e8f1ec;padding-block:3rem 2rem;margin-top:1rem}
-footer .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.5rem}
-footer h3{font-size:1.1rem;margin-bottom:.8rem;color:var(--gold)}
-footer p,footer li{margin:0 0 .35rem;color:rgba(232,241,236,.85);font-size:.95rem}
-footer ul{list-style:none;margin:0;padding:0}
-footer a:hover{color:#fff;text-decoration:underline}
-.legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);padding-top:1.2rem;font-size:.85rem;color:rgba(232,241,236,.7)}
-.wa{position:fixed;inset-inline-start:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:30;background:#1fa855;color:#fff;border-radius:999px;padding:.7rem 1.2rem;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25)}
-
-@media (max-width:900px){
-  #menu{display:block}
-  nav{display:none;position:absolute;inset-inline:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:.75rem 1.25rem 1.25rem;max-height:calc(100vh - 80px);overflow-y:auto}
-  nav.open{display:flex}
-  .sub{position:static;box-shadow:none;border:0;padding:0 .8rem}
-  .bar>.btn{display:none}
-  .hero .wrap,footer .wrap{grid-template-columns:1fr;gap:2rem}
-  .totals{grid-template-columns:repeat(2,1fr)}
-  .totals div{border-inline-start:0;border-top:1px solid var(--line)}
-  .totals div:nth-child(-n+2){border-top:0}
-  .totals div:nth-child(even){border-inline-start:1px solid var(--line)}
-  .totals div:last-child{grid-column:1/-1;border-inline-start:0}
-  .proj{grid-template-columns:1fr}
-  .p.big{flex-direction:column;align-items:flex-start}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d5b45">
+  <title>جمعية الدعوة والإرشاد بالشرائع بمكة المكرمة</title>
+  <meta name="description" content="جمعية الدعوة والإرشاد بالشرائع بمكة المكرمة — صفحة تعريفية ثابتة.">
+  <style>
+    :root{
+      --green:#0d5b45;--green-2:#0a4435;--mint:#eaf4ef;--gold:#c49a45;
+      --ink:#17332a;--muted:#64766e;--paper:#fff;--bg:#f5f8f6;--line:#dce8e1;
+      --shadow:0 18px 50px rgba(13,91,69,.10);--radius:22px;
+      font-family:Tahoma,Arial,sans-serif;color:var(--ink);background:var(--bg)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);line-height:1.85;-webkit-font-smoothing:antialiased}
+    button{font:inherit}
+    .container{width:min(1160px,calc(100% - 36px));margin:auto}
+    .topline{background:var(--green-2);color:#d9ece3;font-size:.82rem}
+    .topline .container{display:flex;justify-content:space-between;gap:1rem;padding:.45rem 0}
+    .topline span:last-child{color:#e5c77e}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .bar{min-height:76px;display:flex;align-items:center;gap:1.5rem}
+    .brand{display:flex;align-items:center;gap:.7rem;min-width:230px}
+    .brand-mark{width:48px;height:48px;flex:none}
+    .brand strong{display:block;font-size:1rem;line-height:1.45;color:var(--green)}
+    .brand small{display:block;color:var(--muted);font-size:.72rem}
+    nav{display:flex;align-items:center;gap:.2rem;margin-inline-start:auto}
+    nav span{padding:.55rem .75rem;border-radius:10px;font-size:.9rem;color:#365349;cursor:default}
+    nav span:hover{background:var(--mint);color:var(--green)}
+    .button{border:0;border-radius:999px;background:var(--gold);color:#2b210d;padding:.72rem 1.2rem;font-weight:bold;cursor:default;box-shadow:0 8px 18px rgba(196,154,69,.22)}
+    .button.outline{background:transparent;color:inherit;border:1px solid currentColor;box-shadow:none}
+    #menu{display:none;margin-inline-start:auto;background:var(--mint);color:var(--green);border:0;border-radius:12px;padding:.55rem .8rem;cursor:pointer}
+    .hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,var(--green-2),var(--green));}
+    .hero:before{content:"";position:absolute;inset:0;opacity:.11;background-image:radial-gradient(circle at 16% 24%,#fff 0 1px,transparent 1.5px),radial-gradient(circle at 78% 62%,#fff 0 1px,transparent 1.5px);background-size:28px 28px,36px 36px}
+    .hero .container{position:relative;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:4rem;padding:clamp(4rem,9vw,7rem) 0}
+    .eyebrow{display:inline-flex;align-items:center;gap:.5rem;color:#f0d791;font-size:.9rem;font-weight:bold;margin-bottom:1rem}
+    .eyebrow:before{content:"";width:28px;height:2px;background:var(--gold)}
+    h1,h2,h3{line-height:1.4;margin:0;font-weight:700}
+    h1{font-size:clamp(2.1rem,5vw,4rem);letter-spacing:-.04em;max-width:720px}
+    .hero p{color:#d9ebe3;max-width:650px;font-size:1.08rem;margin:1.2rem 0 1.8rem}
+    .actions{display:flex;gap:.7rem;flex-wrap:wrap}
+    .hero .outline{color:#fff;border-color:rgba(255,255,255,.65)}
+    .hero-card{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.09);border-radius:28px;padding:1.5rem;box-shadow:0 25px 70px rgba(0,0,0,.12)}
+    .hero-card-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.17);padding-bottom:1rem;margin-bottom:.5rem}
+    .hero-card-head b{font-size:1.1rem}.hero-card-head span{color:#f0d791;font-size:.8rem}
+    .impact{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+    .impact div{padding:1rem;border-radius:16px;background:rgba(0,0,0,.13)}
+    .impact strong{display:block;font-size:1.7rem;color:#fff}.impact small{color:#cfe2d9;font-size:.78rem}
+    section{padding:clamp(3.5rem,7vw,6rem) 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:2rem}
+    .section-head h2{font-size:clamp(1.6rem,3vw,2.4rem);color:var(--green)}
+    .section-head p{margin:.4rem 0 0;color:var(--muted);max-width:620px}
+    .section-kicker{color:var(--gold);font-size:.78rem;font-weight:bold;letter-spacing:.08em}
+    .stats{display:grid;grid-template-columns:repeat(5,1fr);background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .stat{text-align:center;padding:1.7rem 1rem;border-inline-start:1px solid var(--line)}.stat:first-child{border:0}
+    .stat strong{display:block;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--green);line-height:1.2}.stat span{display:block;color:var(--muted);font-size:.85rem;margin-top:.35rem}
+    .programs{background:var(--mint)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;min-height:220px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .card:hover{transform:translateY(-5px);border-color:#9bc8b4;box-shadow:var(--shadow)}
+    .card.featured{grid-column:span 2;background:var(--green);color:#fff;border-color:var(--green)}
+    .icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:var(--mint);color:var(--green);font-size:1.35rem;margin-bottom:1.2rem}.featured .icon{background:rgba(255,255,255,.14);color:#f0d791}
+    .card h3{font-size:1.25rem}.card p{color:var(--muted);font-size:.92rem;margin:.55rem 0 1.2rem}.featured p{color:#d8ebe2}
+    .card .label{margin-top:auto;color:var(--green);font-size:.83rem;font-weight:bold}.featured .label{color:#f0d791}
+    .news-list{border-top:1px solid var(--line)}
+    .news-item{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;padding:1.2rem .2rem;border-bottom:1px solid var(--line)}
+    .news-item h3{font-size:1.05rem}.news-item p{color:var(--muted);font-size:.88rem;margin:.25rem 0 0}.news-item .date{color:var(--green);font-size:.8rem;white-space:nowrap}
+    .report-link{color:inherit;text-decoration:none;display:block}.report-link .news-item:hover h3{color:var(--green)}
+    .partners{background:#fff}
+    .partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}.partner{border:1px solid var(--line);border-radius:16px;padding:1.2rem;text-align:center;color:var(--green);font-weight:bold;background:linear-gradient(135deg,#fff,var(--mint))}
+    .cta{background:linear-gradient(120deg,var(--green),#187c5d);color:#fff;border-radius:28px;padding:clamp(2rem,5vw,3.7rem);display:flex;align-items:center;justify-content:space-between;gap:2rem;overflow:hidden;position:relative}.cta:after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(255,255,255,.15);border-radius:50%;inset-inline-start:-70px;bottom:-150px}.cta h2{font-size:clamp(1.5rem,3vw,2.5rem)}.cta p{color:#d9ebe3;margin:.5rem 0 0}
+    footer{background:var(--green-2);color:#dcece5;padding:3.2rem 0 1.2rem}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem}.footer-grid h3{color:#f0d791;font-size:1rem;margin-bottom:.7rem}.footer-grid p,.footer-grid li{font-size:.88rem;color:#bcd5ca;margin:.2rem 0}.footer-grid ul{list-style:none;padding:0;margin:0}.footer-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:2rem;padding-top:1rem;color:#91b2a4;font-size:.78rem}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){nav{display:none;position:absolute;top:100%;inset-inline:0;background:#fff;border-bottom:1px solid var(--line);padding:.7rem 1.1rem;flex-direction:column;align-items:stretch}nav.open{display:flex}nav span{padding:.75rem}.bar>.button{display:none}#menu{display:block}.hero .container{grid-template-columns:1fr;gap:2.4rem}.stats{grid-template-columns:repeat(2,1fr)}.stat{border-top:1px solid var(--line);border-inline-start:0}.stat:nth-child(even){border-inline-start:1px solid var(--line)}.stat:nth-child(-n+2){border-top:0}.cards{grid-template-columns:1fr}.card.featured{grid-column:auto}.partner-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.container{width:min(100% - 26px,1160px)}.topline .container{font-size:.72rem}.brand{min-width:0}.brand small{display:none}.hero .container{padding:3.4rem 0}.hero-card{padding:1rem}.section-head{display:block}.section-head p{margin-top:.5rem}.news-item{grid-template-columns:1fr}.news-item .date{white-space:normal}.cta{display:block}.cta .button{margin-top:1.3rem}.footer-grid{grid-template-columns:1fr}.partner-grid{grid-template-columns:1fr 1fr}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+  </style>
 </head>
 <body>
-<header>
-  <div class="wrap bar">
-    <a class="brand" aria-label="جمعية الدعوة والإرشاد بالشرائع">
-      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="var(--brand)"/><path d="M20 7l4 7 7-4-4 7 7 4-7 4 4 7-7-4-4 7-4-7-7 4 4-7-7-4 7-4-4-7 7 4z" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="20" cy="20" r="3.2" fill="var(--gold)"/></svg>
-      <span>جمعية الدعوة والإرشاد<br>بالشرائع بمكة المكرمة</span>
-    </a>
-    <button id="menu" aria-expanded="false" aria-controls="nav">القائمة</button>
-    <nav id="nav" aria-label="القائمة الرئيسية">
-      <a>عن الجمعية</a>
-      <a>المشاريع والبرامج</a>
-      <details><summary>الإدارة والتنظيم</summary><div class="sub">
-        <a>الهيكل الإداري</a>
-        <a>الإدارات</a>
-        <a>اللجان</a>
-        <a>صوت العميل</a></div></details>
-      <details><summary>الحوكمة</summary><div class="sub">
-        <a>اللوائح والخطط</a>
-        <a>السياسات</a>
-        <a>المحاضر والتقارير</a>
-        <a>أملاك واستثمارات الجمعية</a>
-        <a>قياس رضا المستفيدين</a></div></details>
-      <a>آخر الأخبار</a>
-      <a>تواصل معنا</a>
-    </nav>
-    <a class="btn">تبرع الآن</a>
-  </div>
-</header>
+  <div class="topline"><div class="container"><span>جمعية الدعوة والإرشاد بالشرائع بمكة المكرمة</span><span>صفحة تعريفية ثابتة</span></div></div>
+  <header>
+    <div class="container bar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="14" fill="#0d5b45"/><path d="M24 8l4.6 8.2 9.4-2.4-6.2 7.5 7.2 6.2-9.5-.2L27 37l-5.2-8.3-8.8 3.4 5.2-8.2-7-5.5 9.4.1L24 8z" fill="none" stroke="#e5c77e" stroke-width="1.8"/><circle cx="24" cy="24" r="3.4" fill="#e5c77e"/></svg>
+        <div><strong>جمعية الدعوة والإرشاد</strong><small>بالشرائع بمكة المكرمة</small></div>
+      </div>
+      <button id="menu" type="button" aria-expanded="false">القائمة</button>
+      <nav id="nav" aria-label="القائمة الرئيسية"><span>عن الجمعية</span><span>المشاريع والبرامج</span><span>الحوكمة</span><span>الأخبار</span><span>تواصل معنا</span></nav>
+      <button class="button" type="button">تبرع الآن</button>
+    </div>
+  </header>
 
-<main id="top">
-  <div class="hero">
-    <div class="wrap">
+  <main>
+    <section class="hero"><div class="container">
       <div>
-        <h1>الطريق يحتاج دعمكم، فكونوا شريكًا في استمرار الدعوة</h1>
-        <p>جمعية خيرية مصرحة من المركز الوطني لتنمية القطاع غير الربحي برقم 3201، تدعو إلى الله بالحكمة والموعظة الحسنة في شرق مكة المكرمة.</p>
-        <div class="acts">
-          <a class="btn">تبرع الآن</a>
-          <a class="btn ghost">مشاريع تنتظر دعمكم</a>
-        </div>
+        <div class="eyebrow">نزرع أثرًا… ونبني إنسانًا</div>
+        <h1>معًا نواصل طريق الدعوة ونصنع أثرًا يبقى</h1>
+        <p>جمعية خيرية مصرحة برقم 3201، تعمل على نشر الهداية وتعليم المسلمين الجدد وخدمة الجاليات في شرق مكة المكرمة.</p>
+        <div class="actions"><button class="button" type="button">اكتشف مشاريعنا</button><button class="button outline" type="button">اعرف المزيد</button></div>
       </div>
-      <ul class="road" aria-label="حصاد شهر أكتوبر 2026">
-        <li><small>حصاد أكتوبر 2026</small><b>37</b><span>مسلمًا جديدًا بفضل الله</span></li>
-        <li><b>14,343</b><span>مستفيد من برامج إدارة الدعوة</span></li>
-        <li><b>32 درسًا</b><span>و4 لقاءات للجاليات، أثرها وصل إلى 4,005 مستفيدين</span></li>
-      </ul>
-    </div>
-  </div>
+      <div class="hero-card reveal"><div class="hero-card-head"><b>حصاد الدعوة</b><span>أكتوبر 2026</span></div><div class="impact"><div><strong>37</strong><small>مسلمًا جديدًا</small></div><div><strong>14,343</strong><small>مستفيدًا من البرامج</small></div><div><strong>32</strong><small>درسًا دعويًا</small></div><div><strong>4,005</strong><small>مستفيد من لقاءات الجاليات</small></div></div></div>
+    </div></section>
 
-  <section>
-    <div class="wrap">
-      <div class="totals" id="totals">
-        <div><b data-n="11721" data-s="+">11,721+</b><span>مسلم جديد</span></div>
-        <div><b data-n="5650" data-s="+">5,650+</b><span>مشروع ومبادرة</span></div>
-        <div><b data-n="9">9</b><span>مترجمون</span></div>
-        <div><b data-n="900" data-s="+">900+</b><span>متطوع</span></div>
-        <div><b data-n="3700000" data-s="+">3,700,000+</b><span>مستفيد</span></div>
-      </div>
-    </div>
-  </section>
+    <section class="reveal"><div class="container"><div class="section-head"><div><span class="section-kicker">أرقام تصنع فرقًا</span><h2>أثر يتوسع بفضل عطائكم</h2></div><p>كل رقم هنا يمثل إنسانًا تعلّم، أو فرصة وصلت، أو متطوعًا ساهم في نشر الخير.</p></div><div class="stats"><div class="stat"><strong data-count="11721" data-suffix="+">0</strong><span>مسلم جديد</span></div><div class="stat"><strong data-count="5650" data-suffix="+">0</strong><span>مشروع ومبادرة</span></div><div class="stat"><strong data-count="9">0</strong><span>مترجمون</span></div><div class="stat"><strong data-count="900" data-suffix="+">0</strong><span>متطوع</span></div><div class="stat"><strong data-count="3700000" data-suffix="+">0</strong><span>مستفيد</span></div></div></div></section>
 
-  <section id="projects" style="padding-top:0">
-    <div class="wrap">
-      <div class="head"><h2>مشاريع تنتظر دعمكم</h2><a>عرض جميع المشاريع</a></div>
-      <div class="proj">
-        <a class="p big">
-          <div><h3>غيث بكة</h3><p>وقف على هيئة مبنى يحتضن برامج الجمعية وأنشطتها، ويُخرج من ريعه أوقافًا أخرى لها.</p></div>
-          <span class="more">تفاصيل المشروع</span>
-        </a>
-        <a class="p">
-          <h3>أسلم فثبتوه</h3>
-          <p>نعرّف المسلمين الجدد بأساسيات دينهم وأحكامه، ونحفّظهم الفاتحة وقصار السور، ونقوّي أخوّتهم.</p>
-          <span class="more">تفاصيل المشروع</span>
-        </a>
-        <a class="p">
-          <h3>مشروع ورثة الأنبياء</h3>
-          <p>كفالة الدعاة المترجمين المتخصصين في دعوة الجاليات غير العربية.</p>
-          <span class="more">تفاصيل المشروع</span>
-        </a>
-      </div>
-    </div>
-  </section>
+    <section class="programs"><div class="container reveal"><div class="section-head"><div><span class="section-kicker">برامجنا ومشاريعنا</span><h2>مجالات نعمل من خلالها</h2></div><p>برامج متخصصة تصل إلى المسلمين الجدد والجاليات والدعاة، وتحوّل الدعم إلى أثر ملموس.</p></div><div class="cards"><article class="card featured"><div class="icon">✦</div><h3>غيث بكة</h3><p>وقف يحتضن برامج الجمعية وأنشطتها، ويسهم ريعه في إنشاء أوقاف أخرى مستدامة.</p><span class="label">مشروع نوعي ومستدام</span></article><article class="card"><div class="icon">◈</div><h3>أسلم فثبتوه</h3><p>تعليم المسلمين الجدد أساسيات الدين وتقوية أخوّتهم وتثبيت خطواتهم الأولى.</p><span class="label">تعليم وتأهيل</span></article><article class="card"><div class="icon">✧</div><h3>ورثة الأنبياء</h3><p>كفالة الدعاة المترجمين المتخصصين في دعوة الجاليات غير العربية.</p><span class="label">دعوة الجاليات</span></article></div></div></section>
 
-  <section style="padding-top:0">
-    <div class="wrap">
-      <div class="head"><h2>آخر الأخبار</h2><a>كل الأخبار</a></div>
-      <ul class="news">
-        <li><a><div><h3>بين أيديكم نتاج عطائكم لشهر أكتوبر</h3><p>ثمار برامج إدارة الجاليات خلال الشهر.</p></div><em>اقرأ الخبر</em></a></li>
-        <li><a><div><h3>نتاج عطائكم لشهر أكتوبر: إدارة الدعوة</h3><p>وصلت البرامج إلى 14,343 مستفيدًا.</p></div><em>اقرأ الخبر</em></a></li>
-        <li><a><div><h3>نتاج عطائكم لشهر أغسطس: الدعوة الإلكترونية</h3><p>أثمرت عن إسلام 47 مسلمًا جديدًا.</p></div><em>اقرأ الخبر</em></a></li>
-        <li><a><div><h3>موشن جرافيك مسيرة عطاء 2025</h3><p>عرض مختصر لأهم إنجازات الجمعية في العام.</p></div><em>شاهد الفيديو</em></a></li>
-        <li><a href="https://online.fliphtml5.com/mdshraey/uxat/" class="report-link"><div><h3>التقرير السنوي لعام 2025</h3><p>ثمار العطاء وأثره في برامج الجمعية وأنشطتها.</p></div><em>اقرأ التقرير</em></a></li>
-      </ul>
-    </div>
-  </section>
+    <section><div class="container reveal"><div class="section-head"><div><span class="section-kicker">آخر الأخبار</span><h2>من أخبار الجمعية</h2></div><p>لمحات من ثمار البرامج والأنشطة التي يساهم فيها أهل الخير.</p></div><div class="news-list"><div class="news-item"><div><h3>بين أيديكم نتاج عطائكم لشهر أكتوبر</h3><p>ثمار برامج إدارة الجاليات خلال الشهر.</p></div><span class="date">أكتوبر 2026</span></div><div class="news-item"><div><h3>نتاج عطائكم لشهر أكتوبر: إدارة الدعوة</h3><p>وصلت البرامج إلى 14,343 مستفيدًا.</p></div><span class="date">أكتوبر 2026</span></div><div class="news-item"><div><h3>نتاج عطائكم لشهر أغسطس: الدعوة الإلكترونية</h3><p>أثمرت عن إسلام 47 مسلمًا جديدًا.</p></div><span class="date">أغسطس 2026</span></div><a class="report-link" href="https://online.fliphtml5.com/mdshraey/uxat/" target="_blank" rel="noopener"><div class="news-item"><div><h3>التقرير السنوي لعام 2025</h3><p>ثمار العطاء وأثره في برامج الجمعية وأنشطتها.</p></div><span class="date">قراءة التقرير ←</span></div></a></div></div></section>
 
-  <section style="padding-top:0">
-    <div class="wrap">
-      <div class="cta">
-        <div><h2>ساهم في استمرار الدعوة</h2><p>تبرعك يصل إلى مسلمين جدد وجاليات ودعاة يعملون كل يوم.</p></div>
-        <div class="acts"><a class="btn">تبرع الآن</a><a class="btn ghost">الحسابات البنكية</a></div>
-      </div>
-    </div>
-  </section>
-</main>
+    <section class="partners"><div class="container reveal"><div class="section-head"><div><span class="section-kicker">شركاء الأثر</span><h2>نعتز بمن يشاركنا الخير</h2></div><p>يتعاظم الأثر عندما تتكامل الجهود وتلتقي النوايا الطيبة.</p></div><div class="partner-grid"><div class="partner">أهل العطاء</div><div class="partner">شركاء الدعوة</div><div class="partner">سواعد التطوع</div><div class="partner">وقف الأثر</div></div></div></section>
 
-<footer>
-  <div class="wrap">
-    <div>
-      <h3>جمعية الدعوة والإرشاد بالشرائع</h3>
-      <p>جمعية خيرية مصرحة برقم 3201 من المركز الوطني لتنمية القطاع غير الربحي.</p>
-      <p>السجل التجاري: 4031271857</p>
-    </div>
-    <div>
-      <h3>تواصل معنا</h3>
-      <ul>
-        <li><a>0500008127</a> (جوال)</li>
-        <li><a>0125235553</a> (ثابت)</li>
-        <li><a>mdshraey@gmail.com</a></li>
-        <li>مكة المكرمة، الشرائع، مخطط 5</li>
-      </ul>
-    </div>
-    <div>
-      <h3>روابط</h3>
-      <ul>
-        <li><a>جميع المشاريع</a></li>
-        <li><a>المتجر الإلكتروني</a></li>
-        <li><a>الحسابات البنكية</a></li>
-        <li><a>X</a> · <a>إنستغرام</a> · <a>فيسبوك</a> · <a>تيك توك</a></li>
-      </ul>
-    </div>
-    <div class="legal">جميع الحقوق محفوظة © 2025 جمعية الدعوة والإرشاد</div>
-  </div>
-</footer>
+    <section><div class="container"><div class="cta reveal"><div><h2>ساهم في استمرار الدعوة</h2><p>دعمك يفتح بابًا جديدًا للتعليم والهداية وخدمة المجتمع.</p></div><button class="button" type="button">كن شريكًا في الأثر</button></div></div></section>
+  </main>
 
-<a class="wa" aria-label="تواصل عبر واتساب">واتساب</a>
+  <footer><div class="container"><div class="footer-grid"><div><h3>جمعية الدعوة والإرشاد بالشرائع</h3><p>جمعية خيرية مصرحة برقم 3201 من المركز الوطني لتنمية القطاع غير الربحي.</p><p>السجل التجاري: 4031271857</p></div><div><h3>معلومات الجمعية</h3><ul><li>مكة المكرمة، الشرائع، مخطط 5</li><li>صفحة تعريفية ثابتة</li><li>جميع المعلومات قابلة للتعديل</li></ul></div><div><h3>تواصل معنا</h3><ul><li>جوال: 0500008127</li><li>هاتف: 0125235553</li><li>البريد: mdshraey@gmail.com</li></ul></div></div><div class="footer-bottom">جميع الحقوق محفوظة © 2025 جمعية الدعوة والإرشاد بالشرائع</div></div></footer>
 
-<script>
-(function(){
-  var b=document.getElementById('menu'),n=document.getElementById('nav');
-  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-  if(window.matchMedia('(max-width:900px)').matches){document.querySelectorAll('nav details').forEach(function(d){d.open=true})}
-  var el=document.getElementById('totals');
-  if(!el||!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
-  new IntersectionObserver(function(es,ob){
-    if(!es[0].isIntersecting)return; ob.disconnect();
-    el.querySelectorAll('b').forEach(function(x){
-      var t=+x.dataset.n,s=x.dataset.s||'',st=performance.now();
-      (function f(now){var p=Math.min((now-st)/1200,1),v=Math.round(t*(1-Math.pow(1-p,3)));
-        x.textContent=v.toLocaleString('en-US')+(p<1?'':s); if(p<1)requestAnimationFrame(f)})(st);
-    });
-  },{threshold:.4}).observe(el);
-})();
-</script>
+  <script>
+    (()=>{
+      const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');
+      menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});
+      const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');reveal.unobserve(e.target)}}),{threshold:.12});
+      document.querySelectorAll('.reveal').forEach(el=>reveal.observe(el));
+      const stats=document.querySelector('.stats');
+      const numberObserver=new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)return;numberObserver.disconnect();document.querySelectorAll('[data-count]').forEach(el=>{const target=Number(el.dataset.count),suffix=el.dataset.suffix||'';let start=0;const step=()=>{start=Math.min(target,Math.ceil(start+(target-start)*.12+1));el.textContent=start.toLocaleString('en-US')+suffix;if(start<target)requestAnimationFrame(step)};step()})},{threshold:.35});
+      if(stats)numberObserver.observe(stats);
+    })();
+  </script>
 </body>
 </html>
