@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>جمعية الدعوة والإرشاد بالشرائع بمكة المكرمة</title>
+<meta name="description" content="جمعية خيرية مصرحة برقم 3201 تدعو إلى الله بالحكمة والموعظة الحسنة في شرق مكة المكرمة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Brand tokens: change these four values to match the logo exactly */
+:root{
+  --brand:#0e5a45; --brand-ink:#ffffff; --gold:#b98a2e; --hero-a:#0a3a2d; --hero-b:#12684f;
+  --bg:#f3f6f4; --surface:#ffffff; --ink:#14231d; --muted:#586a61; --line:#dce5e0;
+  --hdr:rgba(243,246,244,.88);
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark; --brand:#3fb58a; --brand-ink:#06251b; --gold:#e0b559; --hero-a:#07241b; --hero-b:#0d4a39;
+    --bg:#0c1511; --surface:#142019; --ink:#eaf2ed; --muted:#9bb0a4; --line:#24352c; --hdr:rgba(12,21,17,.88);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark; --brand:#3fb58a; --brand-ink:#06251b; --gold:#e0b559; --hero-a:#07241b; --hero-b:#0d4a39;
+  --bg:#0c1511; --surface:#142019; --ink:#eaf2ed; --muted:#9bb0a4; --line:#24352c; --hdr:rgba(12,21,17,.88);
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.8 "IBM Plex Sans Arabic",Tahoma,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--hdr);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:"Reem Kufi","IBM Plex Sans Arabic",Tahoma,sans-serif;font-weight:700;line-height:1.35;margin:0}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--hdr);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:1.25rem;min-height:68px}
+.brand{display:flex;align-items:center;gap:.7rem;font-family:"Reem Kufi",sans-serif;font-weight:700;font-size:1.05rem;line-height:1.25}
+.mark{width:40px;height:40px;flex:none}
+nav{margin-inline-start:auto;display:flex;align-items:center;gap:.25rem}
+nav>a,nav summary{padding:.5rem .8rem;border-radius:8px;font-weight:500;font-size:.95rem;cursor:pointer;list-style:none;color:var(--ink)}
+nav summary::-webkit-details-marker{display:none}
+nav>a:hover,nav summary:hover,nav details[open]>summary{background:color-mix(in srgb,var(--brand) 10%,transparent)}
+nav details{position:relative}
+.sub{position:absolute;inset-inline-start:0;top:100%;min-width:230px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.4rem;display:grid;box-shadow:0 14px 34px rgba(0,0,0,.14)}
+.sub a{padding:.5rem .75rem;border-radius:8px;font-size:.93rem}
+.sub a:hover{background:color-mix(in srgb,var(--brand) 10%,transparent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--gold);color:#1d1606;font-weight:600;padding:.7rem 1.4rem;border-radius:999px;border:0;font:600 .98rem "IBM Plex Sans Arabic",sans-serif;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+#menu{display:none;margin-inline-start:auto;background:none;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:.5rem .75rem;font:500 .95rem "IBM Plex Sans Arabic",sans-serif}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--hero-a),var(--hero-b));color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;opacity:.09;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cpath d='M36 6l8 14 14-8-8 14 14 8-14 8 8 14-14-8-8 14-8-14-14 8 8-14-14-8 14-8-8-14 14 8z' fill='none' stroke='white' stroke-width='1.2'/%3E%3C/svg%3E")}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;padding-block:clamp(3rem,8vw,6rem);align-items:center}
+.hero h1{font-size:clamp(2rem,5.2vw,3.6rem)}
+.hero p{max-width:34em;color:rgba(255,255,255,.86);font-size:1.1rem;margin:1.2rem 0 2rem}
+.acts{display:flex;gap:.8rem;flex-wrap:wrap}
+.road{list-style:none;margin:0;padding:0 2rem 0 0;position:relative}
+.road::before{content:"";position:absolute;inset-block:.6rem;inset-inline-start:.45rem;border-inline-start:2px dashed rgba(255,255,255,.4)}
+.road li{position:relative;padding:.9rem 0}
+.road li::before{content:"";position:absolute;inset-inline-start:-1.95rem;top:1.35rem;width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(255,255,255,.14)}
+.road b{display:block;font:700 2rem/1.2 "Reem Kufi",sans-serif}
+.road span{color:rgba(255,255,255,.82);font-size:.95rem}
+.road small{display:block;margin-bottom:.4rem;color:var(--gold);font-weight:600}
+
+/* sections */
+section{padding-block:clamp(3rem,7vw,5.5rem)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}
+.head h2{font-size:clamp(1.6rem,3.4vw,2.3rem)}
+.head a{color:var(--brand);font-weight:600}
+.totals{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:18px;background:var(--surface);overflow:hidden}
+.totals div{padding:1.6rem 1rem;text-align:center;border-inline-start:1px solid var(--line)}
+.totals div:first-child{border-inline-start:0}
+.totals b{display:block;font:700 clamp(1.5rem,3vw,2.2rem)/1.2 "Reem Kufi",sans-serif;color:var(--brand)}
+.totals span{color:var(--muted);font-size:.92rem}
+
+.proj{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+.p{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.8rem;display:flex;flex-direction:column;gap:.8rem;transition:border-color .2s}
+.p:hover{border-color:var(--brand)}
+.p h3{font-size:1.4rem}
+.p p{margin:0;color:var(--muted)}
+.p .more{margin-top:auto;color:var(--brand);font-weight:600}
+.p.big{grid-column:1/-1;background:var(--brand);color:var(--brand-ink);border-color:var(--brand);flex-direction:row;align-items:center;gap:2rem}
+.p.big p{color:inherit;opacity:.88}
+.p.big .more{color:inherit;white-space:nowrap;margin:0;border:1.5px solid currentColor;border-radius:999px;padding:.6rem 1.3rem}
+.p.big div{flex:1}
+
+.news{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.news a{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;padding:1.2rem .25rem;border-bottom:1px solid var(--line)}
+.news a:hover h3{color:var(--brand)}
+.news h3{font-size:1.15rem;transition:color .15s}
+.news p{margin:.2rem 0 0;color:var(--muted);font-size:.95rem}
+.news em{font-style:normal;color:var(--brand);font-weight:600;font-size:.9rem}
+
+.cta{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(2rem,5vw,3.5rem);display:flex;gap:2rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.cta h2{font-size:clamp(1.5rem,3vw,2.1rem)}
+.cta p{margin:.5rem 0 0;color:var(--muted)}
+
+footer{background:var(--hero-a);color:#e8f1ec;padding-block:3rem 2rem;margin-top:1rem}
+footer .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.5rem}
+footer h3{font-size:1.1rem;margin-bottom:.8rem;color:var(--gold)}
+footer p,footer li{margin:0 0 .35rem;color:rgba(232,241,236,.85);font-size:.95rem}
+footer ul{list-style:none;margin:0;padding:0}
+footer a:hover{color:#fff;text-decoration:underline}
+.legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);padding-top:1.2rem;font-size:.85rem;color:rgba(232,241,236,.7)}
+.wa{position:fixed;inset-inline-start:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:30;background:#1fa855;color:#fff;border-radius:999px;padding:.7rem 1.2rem;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+
+@media (max-width:900px){
+  #menu{display:block}
+  nav{display:none;position:absolute;inset-inline:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:.75rem 1.25rem 1.25rem;max-height:calc(100vh - 80px);overflow-y:auto}
+  nav.open{display:flex}
+  .sub{position:static;box-shadow:none;border:0;padding:0 .8rem}
+  .bar>.btn{display:none}
+  .hero .wrap,footer .wrap{grid-template-columns:1fr;gap:2rem}
+  .totals{grid-template-columns:repeat(2,1fr)}
+  .totals div{border-inline-start:0;border-top:1px solid var(--line)}
+  .totals div:nth-child(-n+2){border-top:0}
+  .totals div:nth-child(even){border-inline-start:1px solid var(--line)}
+  .totals div:last-child{grid-column:1/-1;border-inline-start:0}
+  .proj{grid-template-columns:1fr}
+  .p.big{flex-direction:column;align-items:flex-start}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="جمعية الدعوة والإرشاد بالشرائع">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="var(--brand)"/><path d="M20 7l4 7 7-4-4 7 7 4-7 4 4 7-7-4-4 7-4-7-7 4 4-7-7-4 7-4-4-7 7 4z" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="20" cy="20" r="3.2" fill="var(--gold)"/></svg>
+      <span>جمعية الدعوة والإرشاد<br>بالشرائع بمكة المكرمة</span>
+    </a>
+    <button id="menu" aria-expanded="false" aria-controls="nav">القائمة</button>
+    <nav id="nav" aria-label="القائمة الرئيسية">
+      <a href="https://www.gds.org.sa/about-us">عن الجمعية</a>
+      <a href="https://www.gds.org.sa/projects">المشاريع والبرامج</a>
+      <details><summary>الإدارة والتنظيم</summary><div class="sub">
+        <a href="https://www.gds.org.sa/management-and-organization/administrative-structure">الهيكل الإداري</a>
+        <a href="https://www.gds.org.sa/management-and-organization/departments">الإدارات</a>
+        <a href="https://www.gds.org.sa/management-and-organization/committees">اللجان</a>
+        <a href="https://www.gds.org.sa/management-and-organization/customer-vote">صوت العميل</a></div></details>
+      <details><summary>الحوكمة</summary><div class="sub">
+        <a href="https://www.gds.org.sa/governance/llwy-h">اللوائح والخطط</a>
+        <a href="https://www.gds.org.sa/governance/policies">السياسات</a>
+        <a href="https://www.gds.org.sa/governance/lmhdr-wltqryr">المحاضر والتقارير</a>
+        <a href="https://www.gds.org.sa/governance/mlk-wstthmrt-ljmaay">أملاك واستثمارات الجمعية</a>
+        <a href="https://www.gds.org.sa/governance/qys-rd-lmstfydyn">قياس رضا المستفيدين</a></div></details>
+      <a href="https://www.gds.org.sa/our-news">آخر الأخبار</a>
+      <a href="https://www.gds.org.sa/contact-us">تواصل معنا</a>
+    </nav>
+    <a class="btn" href="https://store.gds.org.sa/products">تبرع الآن</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>الطريق يحتاج دعمكم، فكونوا شريكًا في استمرار الدعوة</h1>
+        <p>جمعية خيرية مصرحة من المركز الوطني لتنمية القطاع غير الربحي برقم 3201، تدعو إلى الله بالحكمة والموعظة الحسنة في شرق مكة المكرمة.</p>
+        <div class="acts">
+          <a class="btn" href="https://store.gds.org.sa/products">تبرع الآن</a>
+          <a class="btn ghost" href="#projects">مشاريع تنتظر دعمكم</a>
+        </div>
+      </div>
+      <ul class="road" aria-label="حصاد شهر أكتوبر 2026">
+        <li><small>حصاد أكتوبر 2026</small><b>37</b><span>مسلمًا جديدًا بفضل الله</span></li>
+        <li><b>14,343</b><span>مستفيد من برامج إدارة الدعوة</span></li>
+        <li><b>32 درسًا</b><span>و4 لقاءات للجاليات، أثرها وصل إلى 4,005 مستفيدين</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="totals" id="totals">
+        <div><b data-n="11721" data-s="+">11,721+</b><span>مسلم جديد</span></div>
+        <div><b data-n="5650" data-s="+">5,650+</b><span>مشروع ومبادرة</span></div>
+        <div><b data-n="9">9</b><span>مترجمون</span></div>
+        <div><b data-n="900" data-s="+">900+</b><span>متطوع</span></div>
+        <div><b data-n="3700000" data-s="+">3,700,000+</b><span>مستفيد</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><h2>مشاريع تنتظر دعمكم</h2><a href="https://www.gds.org.sa/projects">عرض جميع المشاريع</a></div>
+      <div class="proj">
+        <a class="p big" href="https://store.gds.org.sa/products/%D9%88%D9%82%D9%81-%D8%BA%D9%8A%D8%AB-%D8%A8%D9%83%D8%A9">
+          <div><h3>غيث بكة</h3><p>وقف على هيئة مبنى يحتضن برامج الجمعية وأنشطتها، ويُخرج من ريعه أوقافًا أخرى لها.</p></div>
+          <span class="more">تفاصيل المشروع</span>
+        </a>
+        <a class="p" href="https://store.gds.org.sa/products/أسلم-فثبتوه">
+          <h3>أسلم فثبتوه</h3>
+          <p>نعرّف المسلمين الجدد بأساسيات دينهم وأحكامه، ونحفّظهم الفاتحة وقصار السور، ونقوّي أخوّتهم.</p>
+          <span class="more">تفاصيل المشروع</span>
+        </a>
+        <a class="p" href="https://store.gds.org.sa/products/مشروع-ورثة-الأنبياء">
+          <h3>مشروع ورثة الأنبياء</h3>
+          <p>كفالة الدعاة المترجمين المتخصصين في دعوة الجاليات غير العربية.</p>
+          <span class="more">تفاصيل المشروع</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><h2>آخر الأخبار</h2><a href="https://www.gds.org.sa/our-news">كل الأخبار</a></div>
+      <ul class="news">
+        <li><a href="https://www.gds.org.sa/our-news/byn-ydykm-ntj-aaty-km-dr-ljlyt-lshhr-ktwbr-2026"><div><h3>بين أيديكم نتاج عطائكم لشهر أكتوبر</h3><p>ثمار برامج إدارة الجاليات خلال الشهر.</p></div><em>اقرأ الخبر</em></a></li>
+        <li><a href="https://www.gds.org.sa/our-news/byn-ydykm-ntj-aaty-km-dr-ldaaw-lshhr-ktwbr2026"><div><h3>نتاج عطائكم لشهر أكتوبر: إدارة الدعوة</h3><p>وصلت البرامج إلى 14,343 مستفيدًا.</p></div><em>اقرأ الخبر</em></a></li>
+        <li><a href="https://www.gds.org.sa/our-news/byn-ydykm-ntj-aaty-km-ldaaw-llktrwny-lshhr-gsts-2026"><div><h3>نتاج عطائكم لشهر أغسطس: الدعوة الإلكترونية</h3><p>أثمرت عن إسلام 47 مسلمًا جديدًا.</p></div><em>اقرأ الخبر</em></a></li>
+        <li><a href="https://youtu.be/LPTbEHMtQ2s"><div><h3>موشن جرافيك مسيرة عطاء 2025</h3><p>عرض مختصر لأهم إنجازات الجمعية في العام.</p></div><em>شاهد الفيديو</em></a></li>
+        <li><a href="https://online.fliphtml5.com/mdshraey/uxat/"><div><h3>التقرير السنوي لعام 2025</h3><p>ثمار العطاء وأثره في برامج الجمعية وأنشطتها.</p></div><em>اقرأ التقرير</em></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cta">
+        <div><h2>ساهم في استمرار الدعوة</h2><p>تبرعك يصل إلى مسلمين جدد وجاليات ودعاة يعملون كل يوم.</p></div>
+        <div class="acts"><a class="btn" href="https://store.gds.org.sa/products">تبرع الآن</a><a class="btn ghost" href="https://www.gds.org.sa/lhsbt-lbnky">الحسابات البنكية</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>جمعية الدعوة والإرشاد بالشرائع</h3>
+      <p>جمعية خيرية مصرحة برقم 3201 من المركز الوطني لتنمية القطاع غير الربحي.</p>
+      <p>السجل التجاري: 4031271857</p>
+    </div>
+    <div>
+      <h3>تواصل معنا</h3>
+      <ul>
+        <li><a href="tel:+966500008127">0500008127</a> (جوال)</li>
+        <li><a href="tel:+966125235553">0125235553</a> (ثابت)</li>
+        <li><a href="mailto:mdshraey@gmail.com">mdshraey@gmail.com</a></li>
+        <li>مكة المكرمة، الشرائع، مخطط 5</li>
+      </ul>
+    </div>
+    <div>
+      <h3>روابط</h3>
+      <ul>
+        <li><a href="https://www.gds.org.sa/projects">جميع المشاريع</a></li>
+        <li><a href="https://store.gds.org.sa/products">المتجر الإلكتروني</a></li>
+        <li><a href="https://www.gds.org.sa/lhsbt-lbnky">الحسابات البنكية</a></li>
+        <li><a href="https://x.com/mdshraey1010">X</a> · <a href="https://www.instagram.com/mdshraey1010/">إنستغرام</a> · <a href="https://www.facebook.com/mdshraey">فيسبوك</a> · <a href="https://www.tiktok.com/@mdshraey1010">تيك توك</a></li>
+      </ul>
+    </div>
+    <div class="legal">جميع الحقوق محفوظة © 2025 جمعية الدعوة والإرشاد</div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/966500008127" aria-label="تواصل عبر واتساب">واتساب</a>
+
+<script>
+(function(){
+  var b=document.getElementById('menu'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  if(window.matchMedia('(max-width:900px)').matches){document.querySelectorAll('nav details').forEach(function(d){d.open=true})}
+  var el=document.getElementById('totals');
+  if(!el||!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  new IntersectionObserver(function(es,ob){
+    if(!es[0].isIntersecting)return; ob.disconnect();
+    el.querySelectorAll('b').forEach(function(x){
+      var t=+x.dataset.n,s=x.dataset.s||'',st=performance.now();
+      (function f(now){var p=Math.min((now-st)/1200,1),v=Math.round(t*(1-Math.pow(1-p,3)));
+        x.textContent=v.toLocaleString('en-US')+(p<1?'':s); if(p<1)requestAnimationFrame(f)})(st);
+    });
+  },{threshold:.4}).observe(el);
+})();
+</script>
+</body>
+</html>
